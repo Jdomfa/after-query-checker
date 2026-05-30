@@ -1,0 +1,5 @@
+.env
+*.log
+venv/
+__pycache__/
+afterquery_cookies.json
