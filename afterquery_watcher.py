@@ -30,11 +30,6 @@ log = logging.getLogger(__name__)
 
 auth_token = None
 session = requests.Session()
-PROXY = os.environ.get("PROXY_URL", "http://14a061d2d78dd:c40a555e12@178.210.253.64:12323")
-session.proxies = {
-    "http": PROXY,
-    "https": PROXY,
-}
 
 auth_session = requests.Session()
 
