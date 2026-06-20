@@ -36,11 +36,12 @@ session.proxies = {
     "https": PROXY,
 }
 
+auth_session = requests.Session()
 
 def refresh_auth_token():
     global auth_token
     log.info("Refreshing auth token...")
-    r = session.post(REFRESH_URL, json={
+    r = auth_session.post(REFRESH_URL, json={
         "grant_type": "refresh_token",
         "refresh_token": REFRESH_TOKEN,
     }, timeout=10)
